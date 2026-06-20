@@ -1,0 +1,36 @@
+<div align="center">
+     <h1>One-Way-Data-Binding</h1>
+     <div>
+          <h3>1. String Interpolation:</h3>
+          <p>{{name}}</p>
+          <p>{{topic}}</p>
+     </div>
+     <div>
+          <h3>2. Property-Binding</h3>
+          <div>
+               <input type="text" id="" name="" [value]="value">
+               <br><br>
+               <div>
+                    <img [src]="image" alt="" width="200px" height="200px">
+               </div>
+          </div>
+     </div>
+     <div>
+          <h3>3. Event-Binding</h3>
+          <button (click)="save()">Save</button>
+          <br><br>
+          <select name="" id="" (change)="changeCountry()">
+               <option value="India">India</option>
+               <option value="America">America</option>
+               <option value="France">France</option>
+               <option value="England">England</option>
+               <option value="Srilanka">Srilanka</option>
+          </select>
+     </div>
+     <h1>Two Way Data Binding</h1>
+     <div>
+          <h3>4. Two Way Data Binding</h3>
+          <input type="text" [(ngModel)]="towayData">
+          {{towayData}}
+     </div>
+</div>
