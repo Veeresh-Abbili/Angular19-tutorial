@@ -1,0 +1,112 @@
+<!-- <p>structural-directive-ngfor-vs-for works!</p> -->
+<div class="row text-center">
+    <div class="col-12 m-3">
+        <h3>Example of *ngFor vs For</h3>
+    </div>
+</div>
+<div class="row text-center">
+
+    <div class="col-4">
+        <select name="" id="" class="p-2">
+            <!-- <option [value]="emp.empnumber" *ngFor="let emp of employees">
+                {{emp.empnumber}} - {{emp.empname}}
+            </option> -->
+            @for (item of employees; track $index) {
+            <option [value]="item.empnumber">
+                {{item.empnumber}} - {{item.empname}}
+            </option>
+            }
+        </select>
+    </div>
+
+
+
+    <div class="col-6">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr *ngFor="let emp of employees">
+                    <td>{{emp.empname}}</td>
+                    <td>{{emp.empnumber}}</td>
+                    <td>{{emp.empemail}}</td>
+                    <td>{{emp.empdep}}</td>
+                </tr> -->
+                @for (item of employees; track $index) {
+                <tr>
+                    <td>{{item.empname}}</td>
+                    <td>{{item.empnumber}}</td>
+                    <td>{{item.empemail}}</td>
+                    <td>{{item.empdep}}</td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="col-2">
+        <ul class="text-start">
+            <!-- <li *ngFor="let emp of companyList">
+                {{emp}}
+            </li> -->
+
+            @for (item of companyList; track $index ; let f=$first, l=$last, e=$even, o=$odd, c=$count, i=$index) {
+
+            @if (f===true) {
+            <li style="color: blue;">
+                {{item}}
+            </li>
+            }@else if(l==true){
+            <li style="color: red;">
+                {{item}}
+            </li>
+            }@else {
+            <li>
+                {{item}}
+            </li>
+            }
+            }@empty {
+            <p>data not found...</p>
+            }
+
+        </ul>
+    </div>
+
+</div>
+
+
+<hr>
+
+
+
+<div class="row col-12 text-center">
+
+    <div class="col-4 m-2 text-start">
+        <!-- <div *ngFor="let copany of companyList">
+            {{copany}}
+        </div> -->
+        @for (item of companyList; track $index) {
+        <div>
+            {{item}}
+        </div>
+        }
+
+    </div>
+
+    <div class="col-4 ">
+        <!-- <button class="btn btn-info m-2" *ngFor="let company of companyList">{{company}}</button> -->
+        @for (item of companyList; track $index) {
+        <button class="btn btn-info m-2">{{item}}</button>
+        }
+    </div>
+
+</div>
