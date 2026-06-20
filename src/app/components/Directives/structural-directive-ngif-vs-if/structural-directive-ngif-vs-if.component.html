@@ -1,0 +1,61 @@
+<!-- <p>structural-directive-ngif-vs-if works!</p> -->
+<div class="row text-center">
+    <div class="col-12 m-3">
+        <h3>Example of *ngIf vs If</h3>
+    </div>
+</div>
+<div class="row text-center">
+
+    <div class="col-4">
+        <div>
+            <input type="checkbox" (click)="onClick()"> Terms & Conditions
+        </div>
+        <!-- <div *ngIf="isChecked">
+            <button class="btn btn-success">submit</button>
+        </div> -->
+        
+        @if(isChecked){
+          <button class="btn btn-success">submit</button>
+        }
+
+    </div>
+
+
+
+
+    <div class="col-4">
+        
+        @if(isInputBox){
+            <input type="text" value="Veeresh">
+        }
+        
+        <!-- <div class="m-2" *ngIf="isInputBox">
+            <input type="text" value="Veeresh">
+        </div> -->
+        <button class="btn btn-info m-2" (click)="showFeild()">showFeild</button>
+        <button class="btn btn-danger m-2" (click)="hideFeild()">hideFeild</button>
+    </div>
+
+
+
+
+    <div class="col-4">
+        <div>
+            <input type="text" class="m-1" [(ngModel)]="input1">
+            <input type="text" [(ngModel)]="input2">
+        </div>
+        <!-- <div *ngIf="input1 !== input2">
+            <h4>both values are not equal</h4>
+        </div>
+        <div *ngIf="input1 === input2">
+            <h4>both value are equal</h4>
+        </div> -->
+
+        @if(input1 !== input2){
+           <h4>both values are not equal</h4>
+        }@else if(input1 === input2){
+            <h4>both value are equal</h4>
+        }
+    </div>
+
+</div>
