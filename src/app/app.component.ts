@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, linkedSignal } from '@angular/core';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { RouterOutlet } from '@angular/router';
 import { StructuralDirectiveNgifVsIfComponent } from './components/Directives/structural-directive-ngif-vs-if/structural-directive-ngif-vs-if.component';
@@ -6,6 +6,7 @@ import { StructuralDirectiveNgforVsForComponent } from './components/Directives/
 import { StructuralDirectiveNgswitchVsSwitchComponent } from './components/Directives/structural-directive-ngswitch-vs-switch/structural-directive-ngswitch-vs-switch.component';
 import { AttributeDirectivesComponent } from './components/Directives/attribute-directives/attribute-directives.component';
 import { SignalsComponent } from './components/signals/signals.component';
+import { LinkedSignalComponent } from './components/linked-signal/linked-signal.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { SignalsComponent } from './components/signals/signals.component';
     // StructuralDirectiveNgforVsForComponent,
     // StructuralDirectiveNgswitchVsSwitchComponent,
     // AttributeDirectivesComponent,
-    SignalsComponent
+    // SignalsComponent,
+    LinkedSignalComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
