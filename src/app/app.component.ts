@@ -5,6 +5,7 @@ import { StructuralDirectiveNgifVsIfComponent } from './components/Directives/st
 import { StructuralDirectiveNgforVsForComponent } from './components/Directives/structural-directive-ngfor-vs-for/structural-directive-ngfor-vs-for.component';
 import { StructuralDirectiveNgswitchVsSwitchComponent } from './components/Directives/structural-directive-ngswitch-vs-switch/structural-directive-ngswitch-vs-switch.component';
 import { AttributeDirectivesComponent } from './components/Directives/attribute-directives/attribute-directives.component';
+import { SignalsComponent } from './components/signals/signals.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { AttributeDirectivesComponent } from './components/Directives/attribute-
     // StructuralDirectiveNgifVsIfComponent,
     // StructuralDirectiveNgforVsForComponent,
     // StructuralDirectiveNgswitchVsSwitchComponent,
-    AttributeDirectivesComponent
+    // AttributeDirectivesComponent,
+    SignalsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
