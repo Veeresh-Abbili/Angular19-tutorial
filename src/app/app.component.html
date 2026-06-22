@@ -22,19 +22,22 @@
                     <a class="nav-link"  routerLinkActive="active" routerLink="ngif">NgIF</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link"  routerLinkActive="active" routerLink="ngfor">NgFor</a>
+                    <a class="nav-link"  routerLinkActive="active" [routerLink]="'ngfor'">NgFor</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link"  routerLinkActive="active" routerLink="ngswitch">NgSwitch</a>
+                    <a class="nav-link"  routerLinkActive="active" routerLink="/ngswitch">NgSwitch</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link"  routerLinkActive="active" routerLink="attribute-directives">Attribute-Directives</a>
+                    <a class="nav-link"  routerLinkActive="active" [routerLink]="['attribute-directives',]">Attribute-Directives</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link"  routerLinkActive="active" routerLink="signal">Signal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link"  routerLinkActive="active" routerLink="linked-signal">Linked-Signal</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link"  routerLinkActive="active" routerLink="built-in-pipes">Built-In-Pipes</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
