@@ -8,17 +8,19 @@ import { AttributeDirectivesComponent } from './components/Directives/attribute-
 import { SignalsComponent } from './components/signals/signals.component';
 import { LinkedSignalComponent } from './components/linked-signal/linked-signal.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { BuiltInPipesComponent } from './components/Pipes/built-in-pipes/built-in-pipes.component';
 
 export const routes: Routes = [
-    {path:'',component:UserComponent},
+    { path: '', component: UserComponent },
     // {path:'',redirectTo:'user',pathMatch:'full'},
-    {path:'user', component:UserComponent},
-    {path:'data-binding',component:DataBindingComponent},
-    {path:'ngif',component:StructuralDirectiveNgifVsIfComponent},
-    {path:'ngfor',component:StructuralDirectiveNgforVsForComponent},
-    {path:'ngswitch',component:StructuralDirectiveNgswitchVsSwitchComponent},
-    {path:'attribute-directives',component:AttributeDirectivesComponent},
-    {path:'signal',component:SignalsComponent},
-    {path:'linked-signal',component:LinkedSignalComponent},
-    {path:'**',component:PageNotFoundComponent}
+    { path: 'user', component: UserComponent },
+    { path: 'data-binding', component: DataBindingComponent },
+    { path: 'ngif', component: StructuralDirectiveNgifVsIfComponent },
+    { path: 'ngfor', component: StructuralDirectiveNgforVsForComponent },
+    { path: 'ngswitch', component: StructuralDirectiveNgswitchVsSwitchComponent },
+    { path: 'attribute-directives', component: AttributeDirectivesComponent },
+    { path: 'signal', component: SignalsComponent },
+    { path: 'linked-signal', component: LinkedSignalComponent },
+    { path: 'built-in-pipes', component: BuiltInPipesComponent },
+    { path: '**', component: PageNotFoundComponent }
 ];
