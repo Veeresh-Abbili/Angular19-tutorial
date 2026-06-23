@@ -9,6 +9,7 @@ import { SignalsComponent } from './components/signals/signals.component';
 import { LinkedSignalComponent } from './components/linked-signal/linked-signal.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BuiltInPipesComponent } from './components/Pipes/built-in-pipes/built-in-pipes.component';
+import { TemplateDrivenFormComponent } from './components/Forms/template-driven-form/template-driven-form.component';
 
 export const routes: Routes = [
     { path: '', component: UserComponent },
@@ -22,5 +23,7 @@ export const routes: Routes = [
     { path: 'signal', component: SignalsComponent },
     { path: 'linked-signal', component: LinkedSignalComponent },
     { path: 'built-in-pipes', component: BuiltInPipesComponent },
-    { path: '**', component: PageNotFoundComponent }
+    { path: 'TDF', component: TemplateDrivenFormComponent },
+    { path: '**', component: PageNotFoundComponent },
+
 ];
