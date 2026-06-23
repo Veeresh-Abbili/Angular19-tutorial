@@ -1,0 +1,98 @@
+<div class="container">
+
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+
+        <h2 class="text-center mt-2"> Reactive Form : User Information</h2>
+
+        <div class="form-group m-2">
+            <label for="">First Name</label>
+            <input type="text" class="form-control" placeholder="Enter First Name" formControlName="firstName">
+            @if (reactiveForm.controls['firstName']?.dirty || reactiveForm.controls['firstName']?.touched) {
+            @if (reactiveForm.controls['firstName']?.errors?.['required']) {
+            <small class="text-danger">First Name is Required</small>
+            }
+            @if (reactiveForm.controls['firstName']?.errors?.['pattern']) {
+            <small class="text-danger">The Firstname does not match the required pattern</small>
+            }
+            }
+        </div>
+
+        <div class="form-group m-2">
+            <label for="">Last Name</label>
+            <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="lastName">
+            @if (reactiveForm.controls['lastName']?.dirty || reactiveForm.controls['lastName']?.touched) {
+            @if (reactiveForm.controls['lastName']?.errors?.['required']) {
+            <small class="text-danger">Last Name is Required</small>
+            }
+            @if (reactiveForm.controls['lastName']?.errors?.['minLength']) {
+            <small class="text-danger">The minimum length of the Lastname should be 5</small>
+            }
+            }
+        </div>
+
+        <div class="form-group m-2">
+            <label for="">Email</label>
+            <input type="email" class="form-control" placeholder="Enter Email" formControlName="email">
+            @if (reactiveForm.controls['email'].dirty || reactiveForm.controls['email'].touched) {
+            @if (reactiveForm.controls['email'].errors?.['required']) {
+            <small class="text-danger">Email is Required</small>
+            }
+            @if (reactiveForm.controls['email']?.errors?.['maxLength']) {
+            <small class="text-danger">email not exceed 10 characters</small>
+            }
+            @if (reactiveForm.controls['email']?.errors?.['email']) {
+            <small class="text-danger">Please Enter a Valid Email address</small>
+            }
+            }
+        </div>
+
+        <div class="form-group m-2">
+            <label for="">Password</label>
+            <input type="password" class="form-control" placeholder="Enter Password" formControlName="password">
+            @if (reactiveForm.controls['password']?.dirty || reactiveForm.controls['password']?.touched) {
+            @if (reactiveForm.controls['password']?.errors?.['required']) {
+            <small class="text-danger">Password is Required</small>
+            }
+            }
+        </div>
+
+        <div class="form-check m-2">
+            <input type="checkbox" class="form-check-input" formControlName="isChecked">
+            <label for="">Check Me Out</label>
+        </div>
+
+        <div class="form-group m-2" formArrayName="skills">
+            <button class="btn btn-primary" (click)="addSkill()">Add Skill</button>
+            <div *ngFor="let skill of skills.controls;let i = index">
+                <div [formGroupName]="i">
+                    {{i+1}} Skill Name : <input type="text" formControlName="skill">
+                    <button (click)="deleteSkill(i)">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-2" formGroupName="address">
+            <h5 class="m-2">Address : </h5>
+            <div class="form-group m-2">
+                <label for="">City</label>
+                <input type="text" class="form-control" placeholder="Enter City Name" formControlName="city">
+            </div>
+            <div class="form-group m-2">
+                <label for="">Street</label>
+                <input type="text" class="form-control" placeholder="Enter Street Name" formControlName="street">
+            </div>
+            <div class="form-group m-2">
+                <label for="">Pincode</label>
+                <input type="number" class="form-control" placeholder="Enter Pincode Name" formControlName="pincode">
+            </div>
+        </div>
+
+        <button class="btn btn-success m-2" [disabled]="!reactiveForm.valid">Submit Values</button>
+        <button class="btn btn-warning m-2" (click)="setValues()">Set Values</button>
+        <button class="btn btn-primary m-2" (click)="resetValues()">Reset Values</button>
+        <button class="btn btn-primary m-2" (click)="setPartialValues()">setPartialValues</button>
+
+
+    </form>
+
+</div>

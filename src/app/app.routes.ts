@@ -10,6 +10,7 @@ import { LinkedSignalComponent } from './components/linked-signal/linked-signal.
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BuiltInPipesComponent } from './components/Pipes/built-in-pipes/built-in-pipes.component';
 import { TemplateDrivenFormComponent } from './components/Forms/template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './components/Forms/reactive-form/reactive-form.component';
 
 export const routes: Routes = [
     { path: '', component: UserComponent },
@@ -24,6 +25,7 @@ export const routes: Routes = [
     { path: 'linked-signal', component: LinkedSignalComponent },
     { path: 'built-in-pipes', component: BuiltInPipesComponent },
     { path: 'TDF', component: TemplateDrivenFormComponent },
+    {path:'reactive-form',component:ReactiveFormComponent},
     { path: '**', component: PageNotFoundComponent },
 
 ];
