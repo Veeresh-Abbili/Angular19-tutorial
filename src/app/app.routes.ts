@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { BuiltInPipesComponent } from './components/Pipes/built-in-pipes/built-in-pipes.component';
 import { TemplateDrivenFormComponent } from './components/Forms/template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './components/Forms/reactive-form/reactive-form.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 export const routes: Routes = [
     { path: '', component: UserComponent },
@@ -26,6 +27,7 @@ export const routes: Routes = [
     { path: 'built-in-pipes', component: BuiltInPipesComponent },
     { path: 'TDF', component: TemplateDrivenFormComponent },
     {path:'reactive-form',component:ReactiveFormComponent},
+    {path:'profile',component:ProfileComponent},
     { path: '**', component: PageNotFoundComponent },
 
 ];
