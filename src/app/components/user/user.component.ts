@@ -1,9 +1,10 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router, RouterLink } from "@angular/router";
+import { DummyComponent } from '../dummy/dummy.component';
 
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [DummyComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
