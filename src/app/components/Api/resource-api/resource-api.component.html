@@ -1,1 +1,21 @@
-<p>resource-api works!</p>
+<div class="container">
+    <h4 class="text-center m-4">Resource() & rxResource() API </h4>
+    <table class="table-success table striped table-hover">
+        <thead>
+            <tr>
+                <th class="col-2">Id</th>
+                <th class="col-2">Name</th>
+                <th class="col-2">User Name</th>
+                <th class="col-3">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of apiData.value();">
+                <td>{{data.id}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.username}}</td>
+                <td>{{data.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
