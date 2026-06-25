@@ -1,0 +1,35 @@
+<div class="container">
+    <h4 class="text-center m-4">CRUD Operations with JSON Server</h4>
+    <table class="table-success table striped table-hover">
+        <thead>
+            <tr>
+                <th class="col-2">Id</th>
+                <th class="col-2">Name</th>
+                <th class="col-2">User Name</th>
+                <th class="col-3">Email</th>
+                <th class="col-1">Update</th>
+                <th class="col-1">View</th>
+                <th class="col-1">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of apiData;">
+                <td>{{data.id}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.username}}</td>
+                <td>{{data.email}}</td>
+                <td>
+                    <button class="btn btn-warning sm " (click)="onUpadate(data.id)">Update</button>
+                </td>
+                <td>
+                    <button class="btn btn-primary sm " (click)="onView(data.id)">View</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger sm " (click)="onDelete(data.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-success m-4" (click)="addNewUser()">Add New User</button>
+
+</div>

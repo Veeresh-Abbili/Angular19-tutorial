@@ -12,6 +12,10 @@ import { BuiltInPipesComponent } from './components/Pipes/built-in-pipes/built-i
 import { TemplateDrivenFormComponent } from './components/Forms/template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './components/Forms/reactive-form/reactive-form.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { CrudComponent } from './components/crud/crud.component';
+import { AddUserComponent } from './components/crud/crud-components/add-user/add-user.component';
+import { ViewUserComponent } from './components/crud/crud-components/view-user/view-user.component';
+import { UpdateUserComponent } from './components/crud/crud-components/update-user/update-user.component';
 
 export const routes: Routes = [
     { path: '', component: UserComponent },
@@ -26,8 +30,12 @@ export const routes: Routes = [
     { path: 'linked-signal', component: LinkedSignalComponent },
     { path: 'built-in-pipes', component: BuiltInPipesComponent },
     { path: 'TDF', component: TemplateDrivenFormComponent },
-    {path:'reactive-form',component:ReactiveFormComponent},
-    {path:'profile',component:ProfileComponent},
-    { path: '**', component: PageNotFoundComponent },
+    { path: 'reactive-form', component: ReactiveFormComponent },
+    { path: 'profile', component: ProfileComponent },
+    { path: 'crud', component: CrudComponent },
+    { path: 'add-user', component: AddUserComponent },
+    { path: 'update-user/:id', component: UpdateUserComponent },
+    { path: 'view-user/:id', component: ViewUserComponent},
+    { path: '**', component: PageNotFoundComponent }
 
 ];
