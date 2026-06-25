@@ -1,0 +1,34 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "name": "Veeresh",
+      "username": "Veera",
+      "email": "veera@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Ramesh",
+      "username": "Ram",
+      "email": "ram@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Suresh",
+      "username": "Suri",
+      "email": "suri@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Naresh",
+      "username": "Nami",
+      "email": "nani@gmail.com"
+    },
+    {
+      "name": "Paramesh",
+      "username": "Param",
+      "email": "param@gmail.com",
+      "id": 5
+    }
+  ]
+}
