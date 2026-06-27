@@ -7,11 +7,11 @@
         <div class="form-group m-2">
             <label for="">First Name</label>
             <input type="text" class="form-control" placeholder="Enter First Name" formControlName="firstName">
-            @if (reactiveForm.controls['firstName']?.dirty || reactiveForm.controls['firstName']?.touched) {
-            @if (reactiveForm.controls['firstName']?.errors?.['required']) {
+            @if (reactiveForm.controls['firstName'].dirty || reactiveForm.controls['firstName'].touched) {
+            @if (reactiveForm.controls['firstName'].errors?.['required']) {
             <small class="text-danger">First Name is Required</small>
             }
-            @if (reactiveForm.controls['firstName']?.errors?.['pattern']) {
+            @if (reactiveForm.controls['firstName'].errors?.['pattern']) {
             <small class="text-danger">The Firstname does not match the required pattern</small>
             }
             }
@@ -20,11 +20,11 @@
         <div class="form-group m-2">
             <label for="">Last Name</label>
             <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="lastName">
-            @if (reactiveForm.controls['lastName']?.dirty || reactiveForm.controls['lastName']?.touched) {
-            @if (reactiveForm.controls['lastName']?.errors?.['required']) {
+            @if (reactiveForm.controls['lastName'].dirty || reactiveForm.controls['lastName'].touched) {
+            @if (reactiveForm.controls['lastName'].errors?.['required']) {
             <small class="text-danger">Last Name is Required</small>
             }
-            @if (reactiveForm.controls['lastName']?.errors?.['minLength']) {
+            @if (reactiveForm.controls['lastName'].errors?.['minLength']) {
             <small class="text-danger">The minimum length of the Lastname should be 5</small>
             }
             }
@@ -37,10 +37,10 @@
             @if (reactiveForm.controls['email'].errors?.['required']) {
             <small class="text-danger">Email is Required</small>
             }
-            @if (reactiveForm.controls['email']?.errors?.['maxLength']) {
+            @if (reactiveForm.controls['email'].errors?.['maxLength']) {
             <small class="text-danger">email not exceed 10 characters</small>
             }
-            @if (reactiveForm.controls['email']?.errors?.['email']) {
+            @if (reactiveForm.controls['email'].errors?.['email']) {
             <small class="text-danger">Please Enter a Valid Email address</small>
             }
             }
@@ -49,8 +49,8 @@
         <div class="form-group m-2">
             <label for="">Password</label>
             <input type="password" class="form-control" placeholder="Enter Password" formControlName="password">
-            @if (reactiveForm.controls['password']?.dirty || reactiveForm.controls['password']?.touched) {
-            @if (reactiveForm.controls['password']?.errors?.['required']) {
+            @if (reactiveForm.controls['password'].dirty || reactiveForm.controls['password'].touched) {
+            @if (reactiveForm.controls['password'].errors?.['required']) {
             <small class="text-danger">Password is Required</small>
             }
             }

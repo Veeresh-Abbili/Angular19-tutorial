@@ -19,6 +19,7 @@ import { UpdateUserComponent } from './components/crud/crud-components/update-us
 import { ResourceApiComponent } from './components/Api/resource-api/resource-api.component';
 import { ReusableComponent } from './components/reusable-components/reusable/reusable.component';
 import { ParentComponent } from './components/communication/parent/parent.component';
+import { StorageComponent } from './components/storage/storage.component';
 
 export const routes: Routes = [
     { path: '', component: ReusableComponent },
@@ -42,6 +43,7 @@ export const routes: Routes = [
     { path: 'resourceapi', component: ResourceApiComponent },
     { path: 'reusable', component: ReusableComponent },
     { path: 'parent', component: ParentComponent },
+    { path: 'storage', component: StorageComponent },
     { path: '**', component: PageNotFoundComponent }
 
 ];
