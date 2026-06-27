@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../../../../services/crud.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ReusableComponent } from '../../../reusable-components/reusable/reusable.component';
 
 @Component({
   selector: 'app-view-user',
-  imports: [],
+  imports: [ReusableComponent],
   templateUrl: './view-user.component.html',
   styleUrl: './view-user.component.css'
 })
-export class ViewUserComponent implements OnInit{
+export class ViewUserComponent implements OnInit {
+  parentProperty: string = "View-User : View User Information "
 
-  constructor(private crud: CrudService, private activRoute: ActivatedRoute, private router:Router) {}
+
+  constructor(private crud: CrudService, private activRoute: ActivatedRoute, private router: Router) { }
 
   userData: any;
   userId!: {
@@ -27,8 +30,8 @@ export class ViewUserComponent implements OnInit{
     })
   }
 
-  onClose(){
-     this.router.navigateByUrl('crud')
+  onClose() {
+    this.router.navigateByUrl('crud')
   }
 
 }

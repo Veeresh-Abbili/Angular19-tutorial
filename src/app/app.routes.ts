@@ -16,9 +16,12 @@ import { CrudComponent } from './components/crud/crud.component';
 import { AddUserComponent } from './components/crud/crud-components/add-user/add-user.component';
 import { ViewUserComponent } from './components/crud/crud-components/view-user/view-user.component';
 import { UpdateUserComponent } from './components/crud/crud-components/update-user/update-user.component';
+import { ResourceApiComponent } from './components/Api/resource-api/resource-api.component';
+import { ReusableComponent } from './components/reusable-components/reusable/reusable.component';
+import { ParentComponent } from './components/communication/parent/parent.component';
 
 export const routes: Routes = [
-    { path: '', component: UserComponent },
+    { path: '', component: ReusableComponent },
     // {path:'',redirectTo:'user',pathMatch:'full'},
     { path: 'user', component: UserComponent },
     { path: 'data-binding', component: DataBindingComponent },
@@ -35,7 +38,10 @@ export const routes: Routes = [
     { path: 'crud', component: CrudComponent },
     { path: 'add-user', component: AddUserComponent },
     { path: 'update-user/:id', component: UpdateUserComponent },
-    { path: 'view-user/:id', component: ViewUserComponent},
+    { path: 'view-user/:id', component: ViewUserComponent },
+    { path: 'resourceapi', component: ResourceApiComponent },
+    { path: 'reusable', component: ReusableComponent },
+    { path: 'parent', component: ParentComponent },
     { path: '**', component: PageNotFoundComponent }
 
 ];
