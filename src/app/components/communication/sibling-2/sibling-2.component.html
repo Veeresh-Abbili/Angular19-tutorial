@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="text-info">
+        <h2>Sibling-2 Component</h2>
+    </div>
+    <div class="text-warning m-2">
+        <p>{{sibling2InputData}}</p>
+    </div>
+    <div class="m-3">
+        <input type="text" #sibling2>
+        <button class="btn btn-success sm m-2" (click)="onSubmit(sibling2.value)">Send Data</button>
+    </div>
+</div>

@@ -3,13 +3,16 @@ import { CrudService } from '../../../../services/crud.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { ReusableComponent } from '../../../reusable-components/reusable/reusable.component';
 @Component({
   selector: 'app-update-user',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,ReusableComponent],
   templateUrl: './update-user.component.html',
   styleUrl: './update-user.component.css'
 })
 export class UpdateUserComponent implements OnInit {
+    parentProperty:string = "Update-User : Please Update User Information "
+
 
   // for ui visible
 

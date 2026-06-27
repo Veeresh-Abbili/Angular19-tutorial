@@ -1,39 +1,36 @@
-<!-- <app-data-binding></app-data-binding> -->
-<!-- <app-structural-directive-ngif-vs-if></app-structural-directive-ngif-vs-if> -->
-<!-- <app-structural-directive-ngfor-vs-for></app-structural-directive-ngfor-vs-for> -->
-<!-- <app-structural-directive-ngswitch-vs-switch></app-structural-directive-ngswitch-vs-switch> -->
-<!-- <app-attribute-directives></app-attribute-directives> -->
-<!-- <app-signals></app-signals> -->
-<!-- <app-linked-signal></app-linked-signal> -->
-
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg bg-body-secondary">
     <div class="container-fluid">
         <a class="navbar-brand" routerLinkActive="active" routerLink="user">User</a>
         <a class="navbar-brand" routerLinkActive="active" routerLink="profile">Profile</a>
 
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" routerLinkActive="active"
                         routerLink="data-binding">Data-Binding</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="ngif">NgIF</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Directives</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" routerLink="/ngif" routerLinkActive="active">NgIf</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/ngfor" routerLinkActive="active">NgFor</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/ngswitch" routerLinkActive="active">NgSwitch</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/attribute-directives"
+                                routerLinkActive="active">Attribute Directives</a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" [routerLink]="'ngfor'">NgFor</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="/ngswitch">NgSwitch</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active"
-                        [routerLink]="['attribute-directives',]">Attribute-Directives</a>
-                </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link" routerLinkActive="active" routerLink="signal">Signal</a>
                 </li>
@@ -43,24 +40,33 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLinkActive="active" routerLink="built-in-pipes">Built-In-Pipes</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="TDF">TDF</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Forms</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" routerLinkActive="active" routerLink="TDF">TDF</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLinkActive="active" routerLink="reactive-form">Reactive
+                                Form</a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="reactive-form">Reactive Form</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" routerLinkActive="active" routerLink="crud">CRUD Operations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLinkActive="active" routerLink="resourceapi">Resource-Api</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="resourceapi">Resource-Api</a>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="reusable">Reusable-Components</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" routerLink="resourceapi">Resource-Api</a>
-                </li> -->
+                    <a class="nav-link" routerLinkActive="active" routerLink="parent">Parent</a>
+                </li>
             </ul>
             <!-- <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

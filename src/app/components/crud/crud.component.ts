@@ -3,13 +3,15 @@ import { CrudService } from '../../services/crud.service';
 import { Iuser } from '../../models/iuser';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { ReusableComponent } from "../reusable-components/reusable/reusable.component";
 @Component({
   selector: 'app-crud',
-  imports: [CommonModule],
+  imports: [CommonModule, ReusableComponent],
   templateUrl: './crud.component.html',
   styleUrl: './crud.component.css'
 })
 export class CrudComponent {
+  parentProperty:string = "CRUD Operations : User Information "
 
   apiData: Iuser[] = [];
 
