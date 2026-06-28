@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ViewEncapsulate1Component } from '../view-encapsulate1/view-encapsulate1.component';
+import { ViewEncapsulate2Component } from '../view-encapsulate2/view-encapsulate2.component';
 
 @Component({
   selector: 'app-data-binding',
-  imports: [ FormsModule],
+  imports: [ FormsModule, ViewEncapsulate1Component,ViewEncapsulate2Component],
   templateUrl: './data-binding.component.html',
-  styleUrl: './data-binding.component.css'
+  styleUrl: './data-binding.component.css',
+  encapsulation : ViewEncapsulation.ShadowDom
 })
 export class DataBindingComponent {
 name:string="Veeresh";

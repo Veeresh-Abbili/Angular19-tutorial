@@ -35,7 +35,11 @@ export const routes: Routes = [
     { path: 'built-in-pipes', component: BuiltInPipesComponent },
     { path: 'TDF', component: TemplateDrivenFormComponent },
     { path: 'reactive-form', component: ReactiveFormComponent },
-    { path: 'profile', component: ProfileComponent },
+    // { path: 'profile', component: ProfileComponent },
+
+    // lazyLoding Technique
+    { path: 'profile', loadComponent : () => import('./components/profile/profile.component').then(c => c.ProfileComponent)},
+
     { path: 'crud', component: CrudComponent },
     { path: 'add-user', component: AddUserComponent },
     { path: 'update-user/:id', component: UpdateUserComponent },
